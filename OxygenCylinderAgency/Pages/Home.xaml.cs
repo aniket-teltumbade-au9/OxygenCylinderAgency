@@ -1,4 +1,4 @@
-﻿using OxygenCylinderAgency.Pages;
+﻿using OxygenCylinderAgency.Pages.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,17 +14,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OxygenCylinderAgency
+namespace OxygenCylinderAgency.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Home : Page
     {
-        public  MainWindow()
+        public Home()
         {
-
             InitializeComponent();
+        }
+
+        public Home(MainWindow mainWindow)
+        {
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Login());
         }
     }
 }
